@@ -1,0 +1,4 @@
+.env
+node_modules/
+#only for mac, **/ symbolise jis bhi folder me hai , ignore
+# **/.DS_STORE  
