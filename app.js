@@ -1,7 +1,6 @@
 if(process.env.NODE_ENV!="production"){
 require("dotenv").config();
 }
-console.log(process.env.SECRET);
 
 const express=require("express");
 const mongoose=require("mongoose");
@@ -50,18 +49,18 @@ app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
 
 app.use(cookieParser("secretcode"));
-app.get( "/getcookies", (req,res)=>{
-    res.cookie("greet","namaste");
-    res.send("send you a cookie");
-});
-app.get("verify",(req,res)=>{
-    console.log(req.signedCookies);   //gives actual value
-    res.send("verified");
-});
-app.get("/getsignedcookie",(req,res)=>{
-    res.cookie("madein","India",{signed : true});
-    res.send("signed cookie sent");
-});
+// app.get( "/getcookies", (req,res)=>{
+//     res.cookie("greet","namaste");
+//     res.send("send you a cookie");
+// });
+// app.get("verify",(req,res)=>{
+//     console.log(req.signedCookies);   //gives actual value
+//     res.send("verified");
+// });
+// app.get("/getsignedcookie",(req,res)=>{
+//     res.cookie("madein","India",{signed : true});
+//     res.send("signed cookie sent");
+// });
 
 const store=MongoStore.create({
     mongoUrl : dbUrl,
