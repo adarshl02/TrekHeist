@@ -15,12 +15,11 @@
     />
     <div class="card-body" style="margin-top: 4rem;">
       <!-- <i><%=listing.owner.username%></i> -->
-      <p class="card-text">OWNED BY : <img
-        class="card-img-top"
+      <p class="card-text">OWNED BY : <span><img
         src="<%=listing.owner.image.url%>"
         alt="listing_image"
-        style="height: 3rem; width:3rem; border-radius: 50%;"
-      /></p>
+        style="height: 3rem; width:3rem; border-radius: 50%;  "
+      /></span> </p>
       <p class="card-text"><%=listing.description%></p>
       <p class="card-text">&#8377;<%=listing.price.toLocaleString("en-IN")%></p>
       <p class="card-text"><%=listing.location%></p>
