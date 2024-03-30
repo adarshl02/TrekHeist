@@ -2,7 +2,7 @@
     <div class="row mt-3">
         <h1 class="col-6 offset-3">SignUp on Wanderlust</h1>
         <div class="col-6 offset-3">
-            <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <form action="/signup" method="POST" class="needs-validation" novalidate enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
@@ -24,6 +24,14 @@
                     <div class="valid-feedback">Looks good</div>
                     <div class="invalid-feedback">Invalid</div>
                 </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Upload your own Image</label>
+                    <input type="file" name="profile[image]"  class="form-control" required  id="image">
+                    <div class="valid-feedback">Looks good</div>
+                    <div class="invalid-feedback">Invalid</div>
+                </div>
+
                     <button class="btn btn-success">SignUp</button>
                 
             </form>

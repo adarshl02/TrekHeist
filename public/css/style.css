@@ -49,6 +49,7 @@ body{
 
 #preloader{
   background: #fff url('/images/loader.gif') no-repeat center center;
+  background-size: 30%;
   height: 100vh;
   width: 100%;
   position : fixed;
@@ -130,16 +131,16 @@ body{
 }
 /* Show Page */
 .show-img{
-    height: 30vh;
+    height: 40vh;
 }
 .btns{
-   display: flex;
-   
+   display: flex; 
 }
 
 #map{
     height: 400px;
     width : 60vh;
+    border: #222222 solid 1px;
 }
 .my{
     border: #222222 solid 1px;
