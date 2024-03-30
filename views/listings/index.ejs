@@ -33,7 +33,14 @@
     display: flex;
     align-items: center;
   }
+
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f09b; /* Greyish background color */
+  }
 </style>
+
 <div id="filters">
   <div class="filter">
     <div><i class="fa-solid fa-fire"></i></div>
@@ -94,17 +101,22 @@
   </div>
 </div>
 
-<h3>All Listings</h3>
+<h3>Most Rated Places</h3>
 <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mt-3">
   <%for(let listing of allListings){ %>
   <a href="/listings/<%=listing._id%>" class="listing-link"
     ><div class="card col listing_card">
-      <img
+      <div class="card-img-top">
+        <div class="placeholder"></div>
+        <img
         src="<%=listing.image.url%>"
-        class="card-img-top"
         alt="listing_image"
+        onload="showImage()"
         style="height: 18rem"
       />
+    
+    </div>
+      
       <div class="card-img-overlay"></div>
       <div class="card-body">
         <p class="card-text">
@@ -132,4 +144,7 @@
       }
     }
   });
+  function showImage(){
+    document.querySelector('.placeholder').style.display='none';
+  }
 </script>
