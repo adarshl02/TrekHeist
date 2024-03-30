@@ -33,6 +33,18 @@ body{
     justify-content: center;
 
 }
+
+@media only screen and (max-width: 768px) {
+    .f-info-links, .f-info-socials, .f-info-brand {
+        flex-wrap: wrap;
+    }
+
+    .f-info-links, .f-info-socials, .f-info-brand > * {
+        width: 50%;
+        text-align: center;
+    }
+}
+
 .f-info-socials i{
     font-size: 1.2rem;
     margin-right:1rem;
@@ -56,7 +68,6 @@ body{
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
-    background-color: #f0f0f09b;
 }
 
 .card-body{
