@@ -14,11 +14,11 @@
       alt="listing_image"
     />
     <div class="card-body" style="margin-top: 4rem;">
-      <!-- <i><%=listing.owner.username%></i> -->
-      <p class="card-text">OWNED BY : <span><img
+      <!-- <i></i> -->
+      <p class="card-text">OWNED BY : <span><%=listing.owner.username%>  <img
         src="<%=listing.owner.image.url%>"
         alt="listing_image"
-        style="height: 3rem; width:3rem; border-radius: 50%;  "
+        style="height: 5rem; width:5rem; border-radius: 50%;"
       /></span> </p>
       <p class="card-text"><%=listing.description%></p>
       <p class="card-text">&#8377;<%=listing.price.toLocaleString("en-IN")%></p>
@@ -124,7 +124,11 @@
       <% for(review of listing.reviews){ %>
       <div class="card col-5 ms-3 mb-3">
         <div class="card-body">
-          <h5 class="card-title">@<%=review.author.username%></h5>
+          <h5 class="card-title"> Added by <b><%=review.author.username%></b> <img
+            src="<%=review.author.image.url%>"
+            alt="listing_image"
+            style="height: 5rem; width:5rem; border-radius: 50%;"
+          /></h5>
           <p
             class="starability-result card-text"
             data-rating="<%=review.rating%>"
