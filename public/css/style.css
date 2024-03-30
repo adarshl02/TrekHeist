@@ -138,9 +138,9 @@ body{
 }
 
 #map{
-    height: 400px;
+    height: 300px;
     width : 60vh;
-    border: #222222 solid 1px;
+    background-color: #ebebeb8a;
 }
 .my{
     border: #222222 solid 1px;
