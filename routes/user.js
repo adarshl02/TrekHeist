@@ -6,8 +6,8 @@ const passport = require("passport");
 const { saveRedirectUrl } = require("../middleware.js");
 const userController = require("../controllers/users.js");
 const multer = require("multer");
-const { storage2 } = require("../cloudconfig.js");
-const upload = multer({ storage2});
+const { storage} = require("../cloudconfig.js");
+const upload = multer({ storage});
 
 router
   .route("/signup")
@@ -15,7 +15,6 @@ router
   .post(
     upload.single('profile[image]'),   // multer process enc-type data to storage2
     wrapAsync(userController.signup),
-    
   );
 
 router

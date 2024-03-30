@@ -15,16 +15,7 @@ const storage = new CloudinaryStorage({
     },
   });
 
-  const storage2 = new CloudinaryStorage({
-    cloudinary: cloudinary,
-    params: {
-      folder: 'wanderlust_dev_profile',
-      allowedFormats : ["png","jpg","jpeg"] // supports promises as well
-    },
-  });  
-
 module.exports ={
     cloudinary,
     storage,
-    storage2
 }  
