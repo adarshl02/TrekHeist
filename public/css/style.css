@@ -19,18 +19,32 @@ body{
     color: #222222 !important;
 }
 /* Extra */
-.extra{
+.gradient-background {
     width: 100%;
     height: 5rem;
     text-align: center;
     justify-content: center;
-    font-size: 4rem;
-    background-color: #fe424d;
+    /* background-color: #fe424d; */
     margin-bottom: 2rem;
-}
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 #preloader{
-  background: #fff url(images/loader.gif) no-repeat center center;
+  background: #fff url(/public/images/loader.gif) no-repeat center center;
   background-size: 15%;
   height: 100vh;
   width: 100%;
