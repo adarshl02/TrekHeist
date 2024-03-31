@@ -14,7 +14,7 @@
       alt="listing_image"
     />
     <div class="card-body" style="margin-top: 4rem;">
-      <p class="card-text" >OWNED BY : <span style="font-family: Dancing Script !important;"><%=listing.owner.username%>  <img
+      <p class="card-text" >OWNED BY : <span style="font-family: Dancing Script !important; font-size:1.6rem"><%=listing.owner.username%>  <img
         src="<%=listing.owner.image.url%>"
         alt="listing_image"
         style="height: 4.5rem; width:4.5rem; border-radius: 40%; box-shadow:2px 2px 10px black; margin-left:1rem;"
@@ -123,7 +123,7 @@
       <% for(review of listing.reviews){ %>
       <div class="card col-5 ms-3 mb-3">
         <div class="card-body">
-          <h5 class="card-title"> Added by <b><%=review.author.username%></b></h5>
+          <h5 class="card-title"> Added by <b style="font-family: Dancing Script !important; font-size:1.6rem"><%=review.author.username%></b></h5>
           <p
             class="starability-result card-text"
             data-rating="<%=review.rating%>"
