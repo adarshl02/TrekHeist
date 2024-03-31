@@ -14,13 +14,10 @@
       alt="listing_image"
     />
     <div class="card-body" style="margin-top: 4rem;">
-      <!-- <i></i> -->
-      <p class="card-text">OWNED BY : <span><%=listing.owner.username%>  <img
-      <!-- <i></i> -->
-      <p class="card-text">OWNED BY : <span><%=listing.owner.username%>  <img
+      <p class="card-text" >OWNED BY : <span style="font-family: Dancing Script !important;"><%=listing.owner.username%>  <img
         src="<%=listing.owner.image.url%>"
         alt="listing_image"
-        style="height: 5rem; width:5rem; border-radius: 40%;"
+        style="height: 4.5rem; width:4.5rem; border-radius: 40%; box-shadow:2px 2px 10px black; margin-left:1rem;"
       /></span> </p>
       <p class="card-text"><%=listing.description%></p>
       <p class="card-text">&#8377;<%=listing.price.toLocaleString("en-IN")%>/person</p>

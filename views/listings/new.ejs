@@ -2,7 +2,7 @@
     <div class="row mt-3">
         <div class="col-6 offset-2">
            
-    <h3>Create a new listing</h3>
+    <h3>Create a new <b>Fav Place</b> </h3>
     <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data" >
         
         <div class="mb-3">
@@ -13,14 +13,14 @@
         </div>
         
         <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
+            <label for="description" class="form-label">Your experience there</label>
             <textarea name="listing[description]" cols="30" rows="5" placeholder="Enter description" class="form-control" required></textarea>
             <div class="valid-feedback">Looks good</div>
             <div class="invalid-feedback">Invalid</div>
         </div>
         
         <div class="mb-3">
-            <label for="image" class="form-label">Upload Image in jpg,jpeg,png</label>
+            <label for="image" class="form-label">Upload Image in jpg,jpeg,png,avif</label>
             <input type="file" name="listing[image]"  class="form-control" required  id="image">
             <div class="valid-feedback">Looks good</div>
             <div class="invalid-feedback">Invalid</div>
@@ -28,7 +28,7 @@
         
         <div class="row">
         <div class="mb-3 col-md-4">
-            <label for="price" class="form-label">Price</label>
+            <label for="price" class="form-label">It Cost you per person</label>
             <input name="listing[price]" placeholder="1200" class="form-control" required>
             <div class="valid-feedback">Looks good</div>
             <div class="invalid-feedback">Invalid</div>
