@@ -146,6 +146,10 @@ body{
     border: 2px 2px black; 
 
 }
+.mine{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 
 @media (max-width: 768px) {
   #map { height: 300px; }

@@ -36,7 +36,7 @@
 
 </style>
 
-<div id="filters">
+<div id="filters" style="overflow-x: auto; white-space: nowrap;">
   <div class="filter">
     <div><i class="fa-solid fa-fire"></i></div>
     <p>Trending</p>
@@ -99,8 +99,9 @@
 <div class="gradient-background">
   "Document your favorite destinations and expenses , weaving a tapestry of your wanderlust journey."
 </div>
-
+<div class="mine">
 <h3>Most Rated Places</h3>
+
 <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 mt-3">
   <%for(let listing of allListings){ %>
   <a href="/listings/<%=listing._id%>" class="listing-link" 
@@ -124,6 +125,7 @@
   >
 
   <%} %>
+</div>
 </div>
 
 <script>
