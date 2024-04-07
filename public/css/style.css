@@ -34,6 +34,7 @@ body{
     background-position: center;
     animation: gradient-animation 18s ease infinite;
     border-radius: 4rem;
+    padding: 3rem;
 }
   
   
