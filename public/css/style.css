@@ -1,3 +1,4 @@
+
 body{
     font-family: 'Plus Jakarta Sans', sans-serif !important;
     display: flex;
@@ -8,7 +9,7 @@ body{
     flex: 1;
 }
 .navbar{
-    height:5rem;
+    /* height:5rem; */
     background-color: white;
 }
 .fa-compass{
@@ -137,11 +138,19 @@ body{
    display: flex; 
 }
 
-#map{
-    height: 300px;
-    width : 60vh;
-    background-color: #ebebeb8a;
+#map { 
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+    border: 2px 2px black; 
+
 }
+
+@media (max-width: 768px) {
+  #map { height: 300px; }
+}
+
 .my{
     border: #222222 solid 1px;
     padding: 20%;

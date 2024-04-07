@@ -3,6 +3,7 @@
   const mapToken="<%=process.env.MAP_TOKEN%>";
   const listing="<%-JSON.stringify(listing)%>";
   </script> 
+
 <div class="row mt-3">
   <div class="col-6 offset-3">
     <h3><%=listing.title%></h3>
@@ -145,11 +146,51 @@
 
     <div class="col-8 offset-3 mb-3">
       <h3>Where you'll be</h3>
-      <div id="map">
-        A Map By MapBox
-      </div>
     </div>
 </div>
+
+<div class="col-12">
+  <div id="map"></div>
+</div>
+
+<!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
+  <script>
+    var map = L.map('map').setView([0, 0], 2); // Default view at the world map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    function geocodeCity() {
+      // var city = document.getElementById('cityInput').value;
+      // var city = "indore";
+      var city = "<%= listing.location%>";
+      if (!city) {
+        alert('Please enter a city name');
+        return;
+      }
+
+      var apiUrl = `https://nominatim.openstreetmap.org/search?q=${city}&format=json`;
+
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          if (data.length > 0) {
+            var lat = parseFloat(data[0].lat);
+            var lon = parseFloat(data[0].lon);
+            map.setView([lat, lon], 10); // Set view to the city with zoom level 10
+            L.marker([lat, lon]).addTo(map)
+              .bindPopup(`<b>${city}</b>`).openPopup();
+          } else {
+            alert(`No coordinates found for ${city}`);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+        });
+    }
+    geocodeCity()
+  </script>
 
 <!-- <script src="/js/map.js"></script> -->
 
