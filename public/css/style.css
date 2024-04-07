@@ -33,6 +33,7 @@ body{
     background-size: 180% 180%;
     background-position: center;
     animation: gradient-animation 18s ease infinite;
+    border-radius: 4rem;
 }
   
   
